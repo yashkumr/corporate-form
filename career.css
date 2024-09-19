@@ -1,0 +1,108 @@
+.error {
+  color: red;
+}
+
+.corpo-img {
+  text-align: center;
+  align-items: center;
+}
+.corpo-img > img {
+  max-width: 175px;
+}
+
+.corporate-form {
+  width: 65%;
+  margin: auto;
+
+  padding: 11px 22px 11px 22px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.corporate-form > form > div > h5 {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+}
+.corporate-form > form > div > input {
+  /* outline: 0px;
+  font-size: 14px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
+  width: 100%;
+  padding: 12px 1em;
+  line-height: 1.4;
+  background-color: #fff;
+  border: 1px solid whitesmoke;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  font-family: "Rubik";
+  font-size: 15px;
+  -webkit-box-shadow: 0 2px 2px 0 #cdcdcd;
+  -moz-box-shadow: 0 2px 2px 0 #cdcdcd;
+  -ms-box-shadow: 0 2px 2px 0 #cdcdcd;
+  box-shadow: 0 2px 2px 0 #cdcdcd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  font-weight: 300;
+}
+.corporate-form > form > div > select {
+  width: 100%;
+  padding: 12px 1em;
+  line-height: 1.4;
+  background-color: #fff;
+  border: 1px solid whitesmoke;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  font-family: "Rubik";
+  font-size: 15px;
+  -webkit-box-shadow: 0 2px 2px 0 #cdcdcd;
+  -moz-box-shadow: 0 2px 2px 0 #cdcdcd;
+  -ms-box-shadow: 0 2px 2px 0 #cdcdcd;
+  box-shadow: 0 2px 2px 0 #cdcdcd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.corporate-label {
+  font-size: 14px;
+  line-height: 4px;
+  font-weight: 500;
+  border: 1px solid red !important  ;
+}
+.corporate-form > form > div > hr {
+
+}
+.corporate-form > form > div > button {
+  border-radius: 0px;
+  background: #e24b0f;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  padding: 5px 18px 5px 18px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.corporate-form > form > div > button:hover {
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  outline: 0px;
+  padding: 5px 18px 5px 18px;
+  background-color: #e24b0f; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
