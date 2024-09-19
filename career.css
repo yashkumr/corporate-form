@@ -23,13 +23,6 @@
   font-size: 16px;
 }
 .corporate-form > form > div > input {
-  /* outline: 0px;
-  font-size: 14px;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
   width: 100%;
   padding: 12px 1em;
   line-height: 1.4;
@@ -80,29 +73,179 @@
   font-weight: 500;
   border: 1px solid red !important  ;
 }
-.corporate-form > form > div > hr {
 
-}
-.corporate-form > form > div > button {
-  border-radius: 0px;
+/* .corporate-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  width: 200px;
+  height: 50px;
   background: #e24b0f;
-  color: #fff;
-  text-align: center;
-  font-weight: normal;
-  padding: 5px 18px 5px 18px;
-  border: none;
-  font-size: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.corporate-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  animation: border-top-right 3s infinite alternate;
+}
+@keyframes border-top-right {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  25% {
+    width: 200px;
+    height: 0px;
+  }
+  50% {
+    width: 200px;
+    height: 48px;
+  }
+  100% {
+    width: 200px;
+    height: 48px;
+  }
+}
+.corporate-button:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  animation: border-bottom-left 3s infinite alternate;
+}
+@keyframes border-bottom-left {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+  }
+  75% {
+    width: 200px;
+    height: 0px;
+  }
+  100% {
+    width: 200px;
+    height: 48px;
+  }
 }
 
-.corporate-form > form > div > button:hover {
-  font-size: 14px;
+@keyframes border-bottom-left {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  50.1% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  75% {
+    width: 200px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 48px;
+    opacity: 1;
+  }
+} */
+
+/* button */
+.corporate-button {
+  padding: 8px 22px;
   border: none;
+  outline: none;
   color: #fff;
-  outline: 0px;
-  padding: 5px 18px 5px 18px;
-  background-color: #e24b0f; /* Change background color on hover */
-  transform: scale(1.1); /* Slightly enlarge the button */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+}
+.corporate-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e66b35;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.corporate-button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* hover */
+.corporate-button:hover::before {
+  opacity: 1;
+}
+
+.corporate-button:active:after {
+  background: transparent;
+}
+
+.corporate-button:active {
+  color: #000;
+  font-weight: bold;
 }

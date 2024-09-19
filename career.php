@@ -79,12 +79,7 @@ if (isset($_POST['submit'])) {
         $flag = false;
     }
 
-    // if (!preg_match("/^[a-zA-Z'-]+$/", $fathername)) {
-    //     $fatherErr = "only alphabet and white space allowed";
-    //     $flag =  false;
-    // }
 
-    // Name and Father name validation end
 
     //number validation
     if (!preg_match('/^[0-9]{10,10}+$/', $contact)) {
@@ -201,80 +196,80 @@ if (isset($_POST['submit'])) {
 
 
 
-        if ($result) {
+        // if ($result) {
 
-            //email send code
-            $to = 'info@corporateplus.com';
-            $subject = "Online Registration Enquiry Notification";
-            $message = "
-            <html>
-            <head>
-              <title>'$subject'</title>
-            </head>
-            <body>
-              <h1 style='color: orange; text-align: center;'> Corporate + </h1>
-              <hr>
-              <p style='text-align: center; font-size: 20px; font-weight: bold;'>Applied For: Registration</p>
-              <hr>
-              <p>Name: $name</p>
-              <hr>
-              <hr>
-              <h5>Company Details</h5>
-              <hr>
-              <p>Company Name: $companyname</p>
-              <hr>
-              <p>Register Address: $registeraddress</p>
-              <hr>
-              <p>Country: $country</p>
-              <hr>
-              <p>State: $state</p>
-              <hr>
-              <p>Pincode: $pincode</p>
-              <hr>
-              <p>GST No : $gstnumber</p>
-              <hr>
-              <p>Annual Spend: $spend</p>
-              <hr>
-              <h5>Business Account Contact Details </h5>
-              <hr>
-              <p>Email: $email</p>
-              <hr>
-              <p>Contact: $contact</p>
-              <hr>
-              <h5> Point Contact Name <h5>
-              <p>: $pointname</p>
-              <hr>
-              <p>AadharCard: $pointnumber</p>
-              <hr>
-              <span>PanCard: <a href='dilip.jrinfotechs.com/career/$panphotoProperPath' download >$name</a></span>
-              <hr>
-              <hr>
-              <span>Aadhar Card: <a href='dilip.jrinfotechs.com/career/$aadharphotoProperPath' download >$name</a></span>
-              <hr>
-               <hr>
-              <span>Agreement Photo: <a href='dilip.jrinfotechs.com/career/$agreementphotoProperPath' download >$name</a></span>
-             
-            </body>
-            </html>
-            ";
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: <' . $email . '>' . "\r\n";
-            $mail = mail($to, $subject, $message, $headers);
+        //     //email send code
+        //     $to = 'info@corporateplus.com';
+        //     $subject = "Online Registration Enquiry Notification";
+        //     $message = "
+        //     <html>
+        //     <head>
+        //       <title>'$subject'</title>
+        //     </head>
+        //     <body>
+        //       <h1 style='color: orange; text-align: center;'> Corporate + </h1>
+        //       <hr>
+        //       <p style='text-align: center; font-size: 20px; font-weight: bold;'>Applied For: Registration</p>
+        //       <hr>
+        //       <p>Name: $name</p>
+        //       <hr>
+        //       <hr>
+        //       <h5>Company Details</h5>
+        //       <hr>
+        //       <p>Company Name: $companyname</p>
+        //       <hr>
+        //       <p>Register Address: $registeraddress</p>
+        //       <hr>
+        //       <p>Country: $country</p>
+        //       <hr>
+        //       <p>State: $state</p>
+        //       <hr>
+        //       <p>Pincode: $pincode</p>
+        //       <hr>
+        //       <p>GST No : $gstnumber</p>
+        //       <hr>
+        //       <p>Annual Spend: $spend</p>
+        //       <hr>
+        //       <h5>Business Account Contact Details </h5>
+        //       <hr>
+        //       <p>Email: $email</p>
+        //       <hr>
+        //       <p>Contact: $contact</p>
+        //       <hr>
+        //       <h5> Point Contact Name <h5>
+        //       <p>: $pointname</p>
+        //       <hr>
+        //       <p>AadharCard: $pointnumber</p>
+        //       <hr>
+        //       <span>PanCard: <a href='dilip.jrinfotechs.com/career/$panphotoProperPath' download >$name</a></span>
+        //       <hr>
+        //       <hr>
+        //       <span>Aadhar Card: <a href='dilip.jrinfotechs.com/career/$aadharphotoProperPath' download >$name</a></span>
+        //       <hr>
+        //        <hr>
+        //       <span>Agreement Photo: <a href='dilip.jrinfotechs.com/career/$agreementphotoProperPath' download >$name</a></span>
+
+        //     </body>
+        //     </html>
+        //     ";
+        //     $headers = "MIME-Version: 1.0" . "\r\n";
+        //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        //     $headers .= 'From: <' . $email . '>' . "\r\n";
+        //     $mail = mail($to, $subject, $message, $headers);
 
 
-            $to1 = $email;
-            $subject1 = "ShineAirways Registration";
-            $message1 = "Thanks You For Regsitering you details on Shine Airways We will reach out to you soon";
-            $headers1 = "MIME-Version: 1.0" . "\r\n";
-            $headers1 .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers1 .= 'From: <info@corporateplus.com>' . "\r\n";
-            $mail1 = mail($to1, $subject1, $message1, $headers1);
+        //     $to1 = $email;
+        //     $subject1 = "ShineAirways Registration";
+        //     $message1 = "Thanks You For Regsitering you details on Shine Airways We will reach out to you soon";
+        //     $headers1 = "MIME-Version: 1.0" . "\r\n";
+        //     $headers1 .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        //     $headers1 .= 'From: <info@corporateplus.com>' . "\r\n";
+        //     $mail1 = mail($to1, $subject1, $message1, $headers1);
 
-            //email code end
+        //     //email code end
 
-            echo "<script>alert('Thank you for registration with us.Our team will contact you soon')</script>";
-        }
+        //     echo "<script>alert('Thank you for registration with us.Our team will contact you soon')</script>";
+        // }
     }
 }
 
@@ -600,7 +595,7 @@ if (isset($_POST['submit'])) {
 
 
                         <div class="col-12">
-                            <button type="submit" name="submit" class="">SUBMIT</button>
+                            <button type="submit" name="submit" class="corporate-button">SUBMIT</button>
                         </div>
 
                     </form>
